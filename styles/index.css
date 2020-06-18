@@ -146,20 +146,12 @@
   z-index: -10;
 }
 
-.label, .label_pad_small, .label_pad_large {
+.label,
+.label_pad-left_small,
+.label_pad-left_large {
   z-index: 0;
   position: relative;
   color: #fff;
-}
-
-.label_pad_small:after {
-  left: 20px;
-  padding: 4px 12px 2px;
-}
-
-.label_pad_large:after {
-  left: 30px;
-  padding: 4px 12px;
 }
 
 .label:after {
@@ -169,6 +161,20 @@
   z-index: 10;
   background-color: #4a90e2;
   border-radius: 3px;
+}
+
+.label_pad-left_small:after {
+  left: 20px;
+  padding: 4px 12px 2px;
+}
+
+.label_pad-left_large:after {
+  left: 30px;
+  padding: 4px 12px;
+}
+
+.label_pad-top_small:after {
+  top: 20px;
 }
 
 .card__text {
@@ -226,7 +232,7 @@
 
 .main-content__two-columns {
   display: grid;
-  grid-template-columns: 1fr 270px;
+  grid-template-columns: 3fr 1fr;
   grid-column-gap: 11.1%;
 }
 
@@ -240,8 +246,25 @@
   grid-row-gap: 60px;
 }
 
-.article_position_main {
+.article_type_large {
   max-height: 560px;
+}
+
+.article_margin_column {
+margin: 0 0 39px;
+}
+
+.article_margin_column:last-child {
+  margin: 0;
+}
+
+
+.article_margin_row {
+  margin: 0 0 30px;
+}
+
+.article_margin_row:last-child {
+  margin: 0;
 }
 
 .article__link {
@@ -254,9 +277,9 @@
   border-radius: 5px;
 }
 
-.article__pic_position_sidebar {
+.article__pic_type_small {
   margin: 0 0 20px;
- }
+}
 
 .article__container {
   display: flex;
@@ -265,7 +288,7 @@
   box-sizing: border-box;
 }
 
-.article__container_position_main {
+.article__container_type_large {
   margin: 0 20px;
   min-height: 249px;
   background-color: #fff;
@@ -282,14 +305,20 @@
   color: #171717;
 }
 
-.article__heading_position_main {
+.article__heading_type_large {
   margin: 0 0 15px;
   font-size: 25px;
   line-height: 1.12;
   max-width: 600px;
 }
 
-.article__heading_position_sidebar {
+.article__heading_type_medium {
+  margin: 0 0 10px;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.article__heading_type_small {
   margin: 0 0 8px;
   font-size: 18px;
   line-height: 1.27;
@@ -304,12 +333,12 @@
   padding: 0;
 }
 
-.article__subtitle_position_main {
+.article__subtitle_type_margin {
   margin: 0 0 14px;
 }
 
-.article__subtitle_position_sidebar {
-  margin: 0 0 14px;
+.article__subtitle_type_marginless {
+  margin: 0;
 }
 
 .article__text {
@@ -318,17 +347,23 @@
   color: #666666;
 }
 
-.article__text_position_main {
+.article__text_type_large {
   font-size: 14px;
   line-height: 1.71;
   max-width: 614px;
   margin: 0;
 }
 
-.article__text_position_sidebar {
+.article__text_type_small {
   font-size: 15px;
   line-height: 1.67;
   margin: 0 0 21px;
+}
+
+.article__button {
+  padding: 17px 0 15px;
+  background-color: #232323;
+  border-radius: 5px;
 }
 
 .main-content__right-sidebar {
@@ -342,10 +377,7 @@
 
 .button {
   width: 100%;
-  padding: 17px 0 15px;
   text-align: center;
-  background-color: #232323;
-  border-radius: 5px;
   color: white;
 }
 
@@ -355,68 +387,70 @@
   font-size: 14px;
   line-height: 1.29;
   margin: 0;
-}  
+}
 
 .section__title {
   font-style: normal;
-font-weight: bold;
-color: #171717;
+  font-weight: bold;
+  color: #171717;
 }
 
 .section__title_position_sidebar {
   font-size: 18px;
-line-height: 1.28;
+  line-height: 1.28;
+  margin: 0 0 23px;
 }
 
-
-
-/*
-
-.popular-posts__list {
+.section__list {
   list-style: none;
-  display: flex;
   padding: 0;
+  margin: 0;
 }
 
-.popular-posts__list_position_sidebar {
+.section__list_type_flex-column {
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
 }
 
-.popular-posts__article {
-  text-decoration: none;
+.section__list_type_grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(min-content, 1fr));
+  grid-template-rows: repeat(3, minmax(min-content, 1fr)) 50px;
+  grid-gap: 10px;
 }
 
-.popular-posts__pic {
+.instagram__container {
+
+}
+
+.instagram__pic {
   width: 100%;
   object-fit: cover;
-  margin: 0 0 20px;
-  position: relative;
-  z-index: 0;
-}
-
-.popular-posts__pic:after {
-  content: "Vehicle";
-  position: absolute;
-  top: 30px;
-  left: 20px;
-  z-index: 10;
-  padding: 4px 12px 2px;
-  background-color: #4a90e2;
   border-radius: 3px;
 }
 
-.popular-posts__heading {
-  margin: 0 0 10px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 1.4;
-  color: #171717;
+.instagram__button {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 4;
+  border-radius: 3px;
+  background-color: #232323;
+  padding: 16px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-*/
+.instagram__logo {
+  width: 16px;
+  height: 16px;
+  display: inline;
+  margin: 0 10px 0 0;
+}
+
 footer {
   width: 100%;
 }
