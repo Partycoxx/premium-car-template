@@ -17,11 +17,11 @@
   margin: 0 auto;
 }
 
+/* Стили для блока header */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 375px;
   color: #fff;
   background-color: black;
   min-height: 90px;
@@ -34,6 +34,8 @@
   background-size: contain;
   background-position: center;
 }
+
+/* Стили для блока logo */
 
 .logo {
   color: #fff;
@@ -52,6 +54,8 @@
   border-radius: 3px;
   margin-left: 6px;
 }
+
+/* Cстили для блока navigation */
 
 .navigation__links {
   list-style: none;
@@ -78,12 +82,30 @@
   line-height: 1.29;
 }
 
+/* Стили для всей страницы */
+
 .main {
-  margin: 0 375px;
+  padding-top: 30px;
+  padding-bottom: 80px;
   background-color: #fff;
-  padding: 30px 0 80px;
   max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(min-content, 292.5px));
+  grid-template-rows: repeat(4, minmax(min-content, max-content));
+  grid-template-areas: 
+  "photo-grid photo-grid photo-grid photo-grid"
+  "main-content main-content main-content sidebar"
+  "toggle toggle . ."
+  "most-popular most-popular most-popular most-popular";
 }
+
+/* Блок, который отвечает за сжатие содержимого страницы */
+.narrow {
+  padding-left: 375px;
+  padding-right: 375px; 
+}
+
+/* Стили для секций  */
 
 .section__title {
   font-style: normal;
@@ -116,9 +138,13 @@
   margin: 0;
 }
 
+/* Стили для блока photo-grid */
+
 .photo-grid {
   margin: 0 0 80px;
   padding: 0;
+  grid-area: photo-grid;
+
 }
 
 .photo-grid__list {
@@ -139,6 +165,7 @@
   grid-row-end: 3;
 }
 
+/* Это говно привести в порядок */
 .label,
 .label_pad-left_small,
 .label_pad-left_large {
@@ -170,15 +197,12 @@
   top: 20px;
 }
 
+/*Стили для основной ленты */
+
 .main-content {
   padding: 0;
   margin: 0;
-}
-
-.main-content__two-columns {
-  display: grid;
-  grid-template-columns: 3fr 1.07fr;
-  grid-column-gap: 11.1%;
+  grid-area: main-content;
 }
 
 .main-content__list {
@@ -186,7 +210,10 @@
   grid-template-columns: minmax(min-content, 1fr);
   grid-template-rows: repeat(5, minmax(min-content, max-content));
   grid-row-gap: 60px;
+  margin: 0 15% 0 0;
 }
+
+/* Стили кнопок */
 
 .button {
   width: 100%;
@@ -203,7 +230,7 @@
   margin: 0;
 }
 
-
+/* Стили для блоков article (статей). Модификаторы large — для больших статей, medium — для средних, small — для мелких, overlay — для статей с текстом на обложке */
 
 .article_type_large {
   max-height: 560px; /* Меняется при адаптиве */
@@ -217,35 +244,32 @@
   margin: 0;
 }
 
-.article_margin_column {
+.article_margin_in-column {
   margin: 0 0 39px;
 }
 
-.article_margin_column:last-child {
+.article_margin_in-column:last-child {
   margin: 0;
 }
 
-.article_margin_row {
+.article_margin_in-row {
   margin: 0 30px 0 0;
 }
 
-.article_margin_row:last-child {
+.article_margin_in-row:last-child {
   margin: 0;
 }
 
 .article__link {
   text-decoration: none;
 }
-
-
-
 .article__link_type_small {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
 
-.article__link_type_grid {
+.article__link_type_overlay {
   position: relative;
   width: 100%;
 }
@@ -254,10 +278,6 @@
   width: 100%;
   object-fit: cover;
   border-radius: 5px;
-}
-
-.article__pic_type_grid {
-  position: relative;
 }
 
 /* .grad {
@@ -286,6 +306,10 @@
   margin: 0 20px 0 0;
 }
 
+.article__pic_type_overlay {
+  position: relative;
+}
+
 .article__container {
   display: flex;
   flex-direction: column;
@@ -307,7 +331,7 @@
   max-width: 178px;
 }
 
-.article__container_type_grid {
+.article__container_type_overlay {
   position: absolute;
   left: 20px;
   bottom: 23px;
@@ -341,7 +365,7 @@
   margin: 4px 0 13px;
 }
 
-.article__heading_type_grid {
+.article__heading_type_overlay {
   font-size: 26px;
 line-height: 1.38;
 color: #FFFFFF;
@@ -358,20 +382,21 @@ margin: 0px;
   padding: 0;
 }
 
-.article__subtitle_type_margin {
+.article__subtitle_type_large {
   margin: 0 0 14px;
 }
 
-.article__subtitle_type_marginless {
+.article__subtitle_type_medium {
   margin: 0;
 }
 
 .article__subtitle_type_small {
   line-height: 1;
   color: #cecece;
+  margin: 0;
 }
 
-.article__subtitle_type_grid {
+.article__subtitle_type_overlay {
 color: #fff;
 margin: 0 0 6px;
 }
@@ -389,7 +414,10 @@ margin: 0 0 6px;
   margin: 0;
 }
 
-.main-content__sidebar {
+/* Стили для блока sidebar */
+
+.sidebar {
+  grid-area: sidebar;
   display: grid;
   grid-template-columns: minmax(min-content, 1fr);
   grid-template-rows: repeat(5, minmax(min-content, max-content));
@@ -398,6 +426,7 @@ margin: 0 0 6px;
   grid-row-gap: 60px;
 }
 
+/* Стили для блока about-us */
 
 .about-us__pic {
   width: 100%;
@@ -438,12 +467,16 @@ margin: 0 0 6px;
   border-radius: 5px;
 }
 
-.picked-posts__list {
+/* Стили для блока с популярными статьями */
+
+.popular-posts__list {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
 }
+
+/* Стили для блока с Instagram-постами */
 
 .instagram__title {
   margin: 0 0 25px;
@@ -479,6 +512,8 @@ margin: 0 0 6px;
   margin: 0 10px 0 0;
 }
 
+/* Стили для блока с тегами */
+
 .tags__title {
   margin: 0 0 26px;
 }
@@ -507,6 +542,8 @@ margin: 0 0 6px;
   font-size: 14px;
   line-height: 1.29;
 }
+
+/* Стили для email-формы */
 
 .email__title {
   margin: 0 0 11px;
@@ -549,7 +586,10 @@ margin: 0 0 6px;
   padding: 16px 0;
 }
 
+/* Стили для счётчика страниц */
+
 .toggle {
+  grid-area: toggle;
   margin: 67px 0 0;
   max-width: 340px;
 }
@@ -592,7 +632,10 @@ margin: 0 0 6px;
   color: #fff;
 }
 
+/* Стили для блока с самыми популярными статьями */
+
 .most-popular {
+  grid-area: most-popular;
   margin: 80px 0 0;
 }
 
@@ -602,23 +645,24 @@ margin: 0 0 6px;
   align-items: center;
 }
 
+/* Общие стили для футера */
+
 footer {
   width: 100%;
   color: #fff;
   box-sizing: border-box;
 }
 
+/* Стили для контентного блока футера */
+
 .content-row {
-  min-height: 500px; /* Позже можно попробовать удалить */
   background-color: #171717;
-  padding: 62px 375px 49px;
+  padding-top: 62px;
+  padding-bottom: 49px;
   display: grid;
-  grid-template-columns: minmax(min-content, 1fr) minmax(293px, 1fr) minmax(
-      min-content,
-      1fr
-    );
+  grid-template-columns: minmax(min-content, 1fr) minmax(min-content, 293px) minmax(min-content, 1fr);  /* Будет меняться при сжатии экрана */
   grid-template-rows: minmax(min-content, max-content);
-  grid-column-gap: 165px;
+  grid-column-gap: 14%;
   box-sizing: border-box;
 }
 
@@ -632,6 +676,8 @@ footer {
   line-height: 1.57;
   color: #cecece;
 }
+
+/* Стили для блока с иконками соцсетей */
 
 .social-icons__title {
   margin: 0 0 23px;
@@ -663,10 +709,11 @@ footer {
   justify-content: center;
 }
 
+/* Стили для навигационного блока футера */
+
 .navigation-row {
   min-height: 94px;
   background-color: #000;
-  padding: 0 375px;
   display: flex;
   justify-content: space-between;
   align-items: center;
