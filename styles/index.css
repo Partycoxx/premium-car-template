@@ -82,7 +82,7 @@
   line-height: 1.29;
 }
 
-/* Стили для всей страницы */
+/* Стили для основного содержимого страницы */
 
 .main {
   padding-top: 30px;
@@ -90,11 +90,15 @@
   background-color: #fff;
   max-width: 1170px;
   display: grid;
-  grid-template-columns: repeat(4, minmax(min-content, 292.5px));
-  grid-template-rows: repeat(4, minmax(min-content, max-content));
+  grid-template-columns: repeat(3, minmax(min-content, 300px)) minmax(min-content, 270px);
+  grid-template-rows: repeat(8, minmax(min-content, max-content));
   grid-template-areas:
     "photo-grid photo-grid photo-grid photo-grid"
-    "main-content main-content main-content sidebar"
+    "main-content main-content main-content about-us"
+    "main-content main-content main-content popular-posts"
+    "main-content main-content main-content instagram"
+    "main-content main-content main-content tags"
+    "main-content main-content main-content email-sidebar"
     "toggle toggle . ."
     "most-popular most-popular most-popular most-popular";
 }
@@ -174,7 +178,7 @@
 
 .main-content__list {
   display: grid;
-  grid-template-columns: minmax(min-content, 1fr);
+  grid-template-columns: minmax(min-content, max-content);
   grid-template-rows: repeat(5, minmax(min-content, max-content));
   grid-row-gap: 60px;
   margin: 0 15% 0 0;
@@ -412,7 +416,7 @@
   margin: 0;
 }
 
-/* Стили для блока sidebar */
+/* Стили для блока sidebar 
 
 .sidebar {
   grid-area: sidebar;
@@ -422,9 +426,13 @@
   padding: 0;
   margin: 0;
   grid-row-gap: 60px;
-}
+} */
 
 /* Стили для блока about-us */
+
+.about-us_position_sidebar {
+  grid-area: about-us;
+}
 
 .about-us__pic {
   width: 100%;
@@ -467,6 +475,10 @@
 
 /* Стили для блока с популярными статьями */
 
+.popular-posts_position_sidebar {
+  grid-area: popular-posts;
+}
+
 .popular-posts__list {
   display: flex;
   flex-direction: column;
@@ -475,6 +487,10 @@
 }
 
 /* Стили для блока с Instagram-постами */
+
+.instagram_position_sidebar {
+  grid-area: instagram;
+}
 
 .instagram__title {
   margin: 0 0 25px;
@@ -512,6 +528,10 @@
 
 /* Стили для блока с тегами */
 
+.tags_position_sidebar {
+  grid-area: tags;
+}
+
 .tags__title {
   margin: 0 0 26px;
 }
@@ -542,6 +562,10 @@
 }
 
 /* Стили для email-формы */
+
+.email_position_sidebar {
+  grid-area: email-sidebar;
+}
 
 .email__title {
   margin: 0 0 11px;
