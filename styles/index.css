@@ -92,17 +92,17 @@
   display: grid;
   grid-template-columns: repeat(4, minmax(min-content, 292.5px));
   grid-template-rows: repeat(4, minmax(min-content, max-content));
-  grid-template-areas: 
-  "photo-grid photo-grid photo-grid photo-grid"
-  "main-content main-content main-content sidebar"
-  "toggle toggle . ."
-  "most-popular most-popular most-popular most-popular";
+  grid-template-areas:
+    "photo-grid photo-grid photo-grid photo-grid"
+    "main-content main-content main-content sidebar"
+    "toggle toggle . ."
+    "most-popular most-popular most-popular most-popular";
 }
 
 /* Блок, который отвечает за сжатие содержимого страницы */
 .narrow {
   padding-left: 375px;
-  padding-right: 375px; 
+  padding-right: 375px;
 }
 
 /* Стили для секций  */
@@ -144,7 +144,6 @@
   margin: 0 0 80px;
   padding: 0;
   grid-area: photo-grid;
-
 }
 
 .photo-grid__list {
@@ -163,38 +162,6 @@
   grid-column-end: 1;
   grid-row-start: 1;
   grid-row-end: 3;
-}
-
-/* Это говно привести в порядок */
-.label,
-.label_pad-left_small,
-.label_pad-left_large {
-  z-index: 0;
-  position: relative;
-  color: #fff;
-}
-
-.label:after {
-  content: "Vehicle";
-  position: absolute;
-  top: 30px;
-  z-index: 10;
-  background-color: #4a90e2;
-  border-radius: 3px;
-}
-
-.label_pad-left_small:after {
-  left: 20px;
-  padding: 4px 12px 2px;
-}
-
-.label_pad-left_large:after {
-  left: 30px;
-  padding: 4px 12px;
-}
-
-.label_pad-top_small:after {
-  top: 20px;
 }
 
 /*Стили для основной ленты */
@@ -232,6 +199,10 @@
 
 /* Стили для блоков article (статей). Модификаторы large — для больших статей, medium — для средних, small — для мелких, overlay — для статей с текстом на обложке */
 
+.article {
+  position: relative;
+}
+
 .article_type_large {
   max-height: 560px; /* Меняется при адаптиве */
 }
@@ -242,6 +213,22 @@
 
 .article_type_small:last-child {
   margin: 0;
+}
+
+.article_type_overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  z-index: 5;
 }
 
 .article_margin_in-column {
@@ -281,19 +268,7 @@
 }
 
 /* .grad {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0) 40%,
-    rgba(0, 0, 0, 1) 100%
-  );
-  z-index: 5;
+  
 } */
 
 .article__pic_type_medium {
@@ -310,6 +285,68 @@
   position: relative;
 }
 
+.article__label {
+  position: absolute;
+  text-decoration: none;
+  background-color: #4a90e2;
+  border-radius: 3px;
+  color: #fff;
+  z-index: 5;
+  padding: 4px 12px;
+  box-sizing: border-box;
+  font-size: 12px;
+  line-height: 1.33;
+}
+
+.article__label_type_large {
+  top: 30px;
+  left: 30px;
+}
+
+.article__label_type_medium {
+  top: 20px;
+  left: 20px;
+}
+
+.article__label_type_overlay {
+  top: 30px;
+  left: 20px; 
+}
+
+
+/* Это говно привести в порядок */
+
+/*
+.label,
+.label_pad-left_small,
+.label_pad-left_large {
+  z-index: 0;
+  position: relative;
+  color: #fff;
+}
+
+.label:after {
+  content: "Vehicle";
+  position: absolute;
+  top: 30px;
+  
+  
+}
+
+.label_pad-left_small:after {
+  left: 20px;
+  
+}
+
+.label_pad-left_large:after {
+  left: 30px;
+  padding: 4px 12px;
+}
+
+.label_pad-top_small:after {
+  top: 20px;
+} */
+
 .article__container {
   display: flex;
   flex-direction: column;
@@ -319,11 +356,11 @@
 
 .article__container_type_large {
   margin: 0 20px;
-  min-height: 249px;
+  min-height: 249px; /* Изменяется при адаптиве */
   background-color: #fff;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  transform: translateY(-129px);
+  transform: translateY(-129px); 
   padding: 72px 30px 30px;
 }
 
@@ -367,10 +404,9 @@
 
 .article__heading_type_overlay {
   font-size: 26px;
-line-height: 1.38;
-color: #FFFFFF;
-margin: 0px;
-
+  line-height: 1.38;
+  color: #ffffff;
+  margin: 0px;
 }
 
 .article__subtitle {
@@ -397,8 +433,8 @@ margin: 0px;
 }
 
 .article__subtitle_type_overlay {
-color: #fff;
-margin: 0 0 6px;
+  color: #fff;
+  margin: 0 0 6px;
 }
 
 .article__text {
@@ -575,9 +611,8 @@ margin: 0 0 6px;
 
 .email__field_color_black {
   background-color: #373737;
-  border: 0; 
-  color: #AEB3BB;
-
+  border: 0;
+  color: #aeb3bb;
 }
 
 .email__button {
@@ -660,7 +695,10 @@ footer {
   padding-top: 62px;
   padding-bottom: 49px;
   display: grid;
-  grid-template-columns: minmax(min-content, 1fr) minmax(min-content, 293px) minmax(min-content, 1fr);  /* Будет меняться при сжатии экрана */
+  grid-template-columns: minmax(min-content, 1fr) minmax(min-content, 293px) minmax(
+      min-content,
+      1fr
+    ); /* Будет меняться при сжатии экрана */
   grid-template-rows: minmax(min-content, max-content);
   grid-column-gap: 14%;
   box-sizing: border-box;
@@ -720,10 +758,10 @@ footer {
 }
 
 .navigation-row__text {
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 18px;
-color: #FFFFFF;
-margin: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  margin: 0;
 }
