@@ -267,10 +267,6 @@
   border-radius: 5px;
 }
 
-/* .grad {
-  
-} */
-
 .article__pic_type_medium {
   margin: 0 0 20px;
 }
@@ -312,40 +308,6 @@
   top: 30px;
   left: 20px; 
 }
-
-
-/* Это говно привести в порядок */
-
-/*
-.label,
-.label_pad-left_small,
-.label_pad-left_large {
-  z-index: 0;
-  position: relative;
-  color: #fff;
-}
-
-.label:after {
-  content: "Vehicle";
-  position: absolute;
-  top: 30px;
-  
-  
-}
-
-.label_pad-left_small:after {
-  left: 20px;
-  
-}
-
-.label_pad-left_large:after {
-  left: 30px;
-  padding: 4px 12px;
-}
-
-.label_pad-top_small:after {
-  top: 20px;
-} */
 
 .article__container {
   display: flex;
