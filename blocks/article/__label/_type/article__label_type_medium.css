@@ -1,0 +1,32 @@
+.article__label_type_medium {
+  top: 20px;
+  left: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  .article__label_type_medium {
+    top: 15px;
+    left: 15px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .article__label_type_medium {
+    top: 10px;
+    left: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .article__label_type_medium {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .article__label_type_medium {
+    visibility: visible;
+    top: 20px;
+    left: 20px;
+  }
+}

@@ -1,0 +1,15 @@
+.article__pic_type_medium {
+  margin: 0 0 20px;
+}
+
+@media screen and (max-width: 1230px) {
+  .article__pic_type_medium {
+    margin: 0 0 10px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .article__pic_type_medium {
+    max-height: 200px;
+  }
+}

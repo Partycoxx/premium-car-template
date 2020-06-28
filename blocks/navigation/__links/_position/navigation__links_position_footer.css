@@ -1,0 +1,6 @@
+@media screen and (max-width: 600px) {
+  .navigation__links_position_footer {
+    flex-wrap: wrap;
+    margin: 0 0 20px;
+  }
+}

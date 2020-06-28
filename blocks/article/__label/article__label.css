@@ -1,0 +1,19 @@
+.article__label {
+  position: absolute;
+  text-decoration: none;
+  background-color: #4a90e2;
+  border-radius: 3px;
+  color: #fff;
+  z-index: 5;
+  padding: 4px 12px;
+  box-sizing: border-box;
+  font-size: 12px;
+  line-height: 1.33;
+}
+
+@media screen and (max-width: 800px) {
+  .article__label {
+    font-size: 9px;
+  }
+}
+

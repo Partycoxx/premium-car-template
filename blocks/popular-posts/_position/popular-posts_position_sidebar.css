@@ -1,0 +1,16 @@
+.popular-posts_position_sidebar {
+  grid-area: popular-posts;
+}
+
+@media screen and (max-width: 1230px) {
+  .popular-posts_position_sidebar {
+    margin: 40px 0 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .popular-posts_position_sidebar {
+    display: none;
+  }
+}
+

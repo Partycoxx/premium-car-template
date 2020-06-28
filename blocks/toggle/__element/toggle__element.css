@@ -1,0 +1,15 @@
+.toggle__element {
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  border-radius: 3px;
+  padding: 11px 15px 13px 15px;
+  text-align: center;
+  max-width: 40px;
+  max-height: 40px;
+}
+
+@media screen and (max-width: 360px) {
+  .toggle__element {
+    padding: 7px 10px 7px 10px;
+  }
+}

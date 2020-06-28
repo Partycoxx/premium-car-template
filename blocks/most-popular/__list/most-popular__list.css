@@ -1,0 +1,11 @@
+.most-popular__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 414px) {
+  .most-popular__list {
+    flex-direction: column;
+  }
+}

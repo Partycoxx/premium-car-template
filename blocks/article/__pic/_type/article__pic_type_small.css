@@ -1,0 +1,5 @@
+.article__pic_type_small {
+  max-width: 95px;
+  min-height: 95px; 
+  margin: 0 20px 0 0;
+}

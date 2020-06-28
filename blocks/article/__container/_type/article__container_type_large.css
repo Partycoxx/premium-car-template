@@ -1,0 +1,18 @@
+.article__container_type_large {
+  margin: 0 20px;
+  min-height: 249px; 
+  background-color: #fff;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  transform: translateY(-129px);
+  padding: 72px 30px 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .article__container_type_large {
+    transform: translateY(-30px);
+    padding: 45px 15px 15px;
+    margin: 0px;
+    border-radius: 0 0 5px 5px;
+  }
+}

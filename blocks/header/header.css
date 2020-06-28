@@ -1,0 +1,21 @@
+@import url(./__search-button/header__search-button.css);
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  background-color: black;
+  min-height: 90px;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    min-height: 80px;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,21 @@
+.article__subtitle {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.29;
+  color: #666666;
+  padding: 0;
+}
+
+@media screen and (max-width: 1230px) {
+  .article__subtitle {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .article__subtitle {
+    font-size: 10px;
+  }
+}
+

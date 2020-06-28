@@ -1,0 +1,15 @@
+.email__subtitle {
+  font-style: normal;
+  font-weight: normal;
+  color: #666666;
+  font-size: 14px;
+  line-height: 1.71;
+  max-width: 252px; 
+  margin: 0 0 27px;
+}
+
+@media screen and (max-width: 1230px) {
+  .email__subtitle {
+    margin: 0 0 10px;
+  }
+}

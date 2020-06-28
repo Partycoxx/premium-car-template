@@ -1,0 +1,19 @@
+@import url(./__list/most-popular__list.css);
+
+
+.most-popular {
+  grid-area: most-popular;
+  margin: 80px 0 0;
+}
+
+@media screen and (max-width: 1230px) {
+  .most-popular {
+    margin: 40px 0 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .most-popular {
+    margin: 20px 0 0;
+  }
+}

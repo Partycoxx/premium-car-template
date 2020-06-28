@@ -1,0 +1,31 @@
+@import url(./__label/article__label.css);
+@import url(./__label/_type/article__label_type_large.css);
+@import url(./__label/_type/article__label_type_medium.css);
+@import url(./__label/_type/article__label_type_overlay.css);
+@import url(./__link/article__link.css);
+@import url(./__link/_type/article__link_type_small.css);
+@import url(./__link/_type/article__link_type_overlay.css);
+@import url(./__pic/article__pic.css);
+@import url(./__pic/_type/article__pic_type_medium.css);
+@import url(./__pic/_type/article__pic_type_small.css);
+@import url(./__pic/_type/article__pic_type_overlay.css);
+@import url(./__container/article__container.css);
+@import url(./__container/_type/article__container_type_large.css);
+@import url(./__container/_type/article__container_type_small.css);
+@import url(./__container/_type/article__container_type_overlay.css);
+@import url(./__subtitle/article__subtitle.css);
+@import url(./__subtitle/_type/article__subtitle_type_large.css);
+@import url(./__subtitle/_type/article__subtitle_type_medium.css);
+@import url(./__subtitle/_type/article__subtitle_type_small.css);
+@import url(./__subtitle/_type/article__subtitle_type_overlay.css);
+@import url(./__heading/article__heading.css);
+@import url(./__heading/_type/article__heading_type_large.css);
+@import url(./__heading/_type/article__heading_type_medium.css);
+@import url(./__heading/_type/article__heading_type_small.css);
+@import url(./__heading/_type/article__heading_type_overlay.css);
+@import url(./__text/article__text.css);
+@import url(./__text/_type/article__text_type_large.css);
+
+.article {
+  position: relative;
+}

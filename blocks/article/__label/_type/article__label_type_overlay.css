@@ -1,0 +1,12 @@
+.article__label_type_overlay {
+  top: 30px;
+  left: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .article__label_type_overlay {
+    top: 15px;
+    left: 15px;
+  }
+}
+

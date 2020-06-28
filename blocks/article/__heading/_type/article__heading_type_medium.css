@@ -1,0 +1,31 @@
+.article__heading_type_medium {
+  margin: 0 0 10px;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+@media screen and (max-width: 1230px) {
+  .article__heading_type_medium {
+    font-size: 18px;
+    line-height: 1.15;
+    margin: 0 0 5px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .article__heading_type_medium {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .article__heading_type_medium {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .article__heading_type_medium {
+    font-size: 20px;
+  }
+}

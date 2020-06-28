@@ -1,0 +1,10 @@
+.article__subtitle_type_overlay {
+  color: #fff;
+  margin: 0 0 6px;
+}
+
+@media screen and (max-width: 600px) {
+  .article__subtitle_type_overlay {
+    margin: 0 0 4px;
+  }
+}

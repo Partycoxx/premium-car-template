@@ -1,0 +1,41 @@
+@import url(./__list/toggle__list.css);
+@import url(./__element/toggle__element.css);
+@import url(./__element/_type/toggle__element_type_checked.css);
+@import url(./__element/_type/toggle__element_type_overflow.css);
+@import url(./__link/toggle__link.css);
+@import url(./__link/_type/toggle__link_type_checked.css);
+
+
+.toggle {
+  grid-area: toggle;
+  margin: 67px 0 0;
+  max-width: 340px;
+}
+
+@media screen and (max-width: 1230px) {
+
+  .toggle {
+    margin: 40px 0 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  .toggle {
+    margin: 40px calc((100% - 340px) / 2) 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .toggle {
+    margin: 20px calc((100% - 340px) / 2) 0;
+  }
+}
+
+@media screen and (max-width: 360px) {
+
+  .toggle {
+    margin: 20px 10px 0;
+  }
+}

@@ -1,0 +1,9 @@
+.about-us_position_sidebar {
+  grid-area: about-us;
+}
+
+@media screen and (max-width: 800px) {
+  .about-us_position_sidebar {
+    display: none;
+  }
+}

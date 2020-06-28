@@ -1,0 +1,17 @@
+.content-row__text {
+  max-width: 270px;
+  padding: 0;
+  margin: 28px 0 64px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.57;
+  color: #cecece;
+}
+
+@media screen and (max-width: 600px) {
+
+  .content-row__text {
+    margin: 20px 0 0;
+  }
+}

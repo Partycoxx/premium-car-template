@@ -1,0 +1,9 @@
+.article__pic_type_overlay {
+  position: relative;
+}
+
+@media screen and (max-width: 360px) {
+  .article__pic_type_overlay {
+    max-height: 200px;
+  }
+}

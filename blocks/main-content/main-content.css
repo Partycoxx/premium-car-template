@@ -1,0 +1,8 @@
+@import url(./__list/main-content__list.css);
+
+.main-content {
+  padding: 0;
+  margin: 0;
+  grid-area: main-content;
+}
+

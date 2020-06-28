@@ -1,0 +1,19 @@
+.article__container_type_overlay {
+  position: absolute;
+  left: 20px;
+  bottom: 23px;
+  z-index: 10;
+}
+
+@media screen and (max-width: 600px) {
+  .article__container_type_overlay {
+    bottom: 10px;
+    left: 15px;
+  }
+}
+
+@media screen and (max-width: 360px){
+.article__container_type_overlay {
+  bottom: 20px;
+}
+}

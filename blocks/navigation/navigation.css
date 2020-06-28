@@ -1,0 +1,9 @@
+@import url(./__links/navigation__links.css);
+@import url(./__links/_position/navigation__links_position_footer.css);
+@import url(./__links-item/navigation__links-item.css);
+@import url(./__list-item/navigation__list-item.css);
+
+.navigation {
+  max-width: 340px;
+  width: 100%;
+}

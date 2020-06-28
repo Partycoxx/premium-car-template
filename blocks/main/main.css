@@ -1,0 +1,54 @@
+.main {
+    padding-top: 30px;
+    padding-bottom: 80px;
+    background-color: #fff;
+    max-width: 1170px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(min-content, 300px)) minmax(min-content, 270px);
+    grid-template-rows: repeat(8, minmax(min-content, max-content));
+    grid-template-areas:
+      "photo-grid photo-grid photo-grid photo-grid"
+      "main-content main-content main-content about-us"
+      "main-content main-content main-content popular-posts"
+      "main-content main-content main-content instagram"
+      "main-content main-content main-content tags"
+      "main-content main-content main-content email-sidebar"
+      "toggle toggle . ."
+      "most-popular most-popular most-popular most-popular";
+  }
+
+  @media screen and (max-width: 1230px) {
+    .main {
+        padding-bottom: 40px;
+        grid-template-columns: repeat(3, minmax(min-content, max-content));
+        grid-template-areas:
+          "photo-grid photo-grid photo-grid"
+          "main-content main-content about-us"
+          "main-content main-content popular-posts"
+          "main-content main-content instagram"
+          "main-content main-content tags"
+          "main-content main-content email-sidebar"
+          "toggle toggle . "
+          "most-popular most-popular most-popular";
+      }
+  }
+
+  @media screen and (max-width: 800px) {
+    .main {
+        grid-template-columns:minmax(min-content, max-content);
+        grid-template-rows: repeat(6, minmax(min-content, max-content));
+        grid-template-areas:
+          "photo-grid"
+          "main-content"
+          "toggle"
+          "most-popular"
+          "instagram"
+          "tags";
+      }
+  }
+
+  @media screen and (max-width: 600px) {
+    .main {
+        padding-top: 10px;
+    }
+}

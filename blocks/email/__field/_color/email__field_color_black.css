@@ -1,0 +1,11 @@
+.email__field_color_black {
+  background-color: #373737;
+  border: 0;
+  color: #aeb3bb;
+}
+
+@media screen and (max-width: 1230px) {
+  .email__field_color_black {
+    padding: 10px 0 10px 10px;
+  }
+}

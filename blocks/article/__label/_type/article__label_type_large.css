@@ -1,0 +1,11 @@
+.article__label_type_large {
+  top: 30px;
+  left: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .article__label_type_large {
+    left: 15px;
+    top: 15px;
+  }
+}

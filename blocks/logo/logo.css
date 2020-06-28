@@ -1,0 +1,11 @@
+@import url(./__pic/logo__pic.css);
+
+.logo {
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.29;
+}

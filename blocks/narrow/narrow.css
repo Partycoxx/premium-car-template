@@ -1,0 +1,25 @@
+.narrow {
+  padding-left: calc((100% - 1170px) / 2);
+  padding-right: calc((100% - 1170px) / 2);
+}
+
+@media screen and (max-width: 1230px) {
+  .narrow {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .narrow {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .narrow {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

@@ -1,0 +1,17 @@
+.email_position_sidebar {
+  grid-area: email-sidebar;
+}
+
+@media screen and (max-width: 1230px) {
+
+  .email_position_sidebar {
+    margin: 40px 0 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  .email_position_sidebar {
+    display: none;
+  }
+}

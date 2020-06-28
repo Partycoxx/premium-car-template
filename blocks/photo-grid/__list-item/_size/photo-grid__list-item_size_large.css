@@ -1,0 +1,20 @@
+.photo-grid__list-item_size_large {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+@media screen and (max-width: 800px) {
+
+  .photo-grid__list-item_size_large {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+}
+
+@media screen and (max-width: 360px) {
+
+  .photo-grid__list-item_size_large {
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+}

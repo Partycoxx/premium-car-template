@@ -1,0 +1,10 @@
+.social-icons__icon {
+  width: 34px;
+  background-color: #373737;
+  border-radius: 3px;
+  margin: 0 15px 0 0;
+}
+
+.social-icons__icon:last-child {
+  margin: 0;
+}

@@ -1,0 +1,8 @@
+@import url(./__text/button__text.css);
+
+.button {
+  width: 100%;
+  text-align: center;
+  color: white;
+  border: 0;
+}
